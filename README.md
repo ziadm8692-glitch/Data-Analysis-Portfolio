@@ -48,3 +48,37 @@ This project performs an end-to-end data science workflow to analyze healthcare 
 1. Clone the repository:
    ```bash
    git clone [https://github.com/your-username/Diabetes-Risk-Prediction.git](https://github.com/your-username/Diabetes-Risk-Prediction.git)
+
+   # Netflix Movies & TV Shows EDA and Prediction Model
+
+## 📌 Project Overview
+This project presents a comprehensive Exploratory Data Analysis (EDA) and Machine Learning classification workflow on the Netflix Movies and TV Shows dataset. It explores global content distribution, duration trends, release patterns, top genres, directors, and actors, followed by a Machine Learning model to predict content classifications.
+
+## 🎯 Key Features & Workflow
+- **Data Cleaning & Missing Value Handling:**
+  - Filled missing values for `director`, `cast`, `country`, `rating`, and `date_added` using domain defaults and modal imputation.
+  - Converted dates to `datetime` format and extracted temporal features (`month_added`, `year_added`, `years_to_add`).
+- **Outlier Handling & Feature Engineering:**
+  - Applied IQR (Interquartile Range) filtering to treat temporal outliers between release year and date added.
+  - Categorized content regions (`Domestic (US)` vs. `International`).
+  - Extracted individual genres, directors, and cast members using string exploding techniques.
+- **Exploratory Data Analysis (EDA):**
+  - **Content Ratio:** Analyzed the distribution between Movies (~69.6%) and TV Shows (~30.4%).
+  - **Top Categories:** Visualized Top 5 Genres, Top Directors, and Top Actors (e.g., Anupam Kher, Shah Rukh Khan).
+  - **Temporal & Duration Insights:** Tracked content added over time, TV Show season counts, and Movie duration distribution.
+- **Machine Learning & Modeling:**
+  - Encoded categorical features using `LabelEncoder`.
+  - Split data using `train_test_split` (80% train / 20% test).
+  - Trained a **Random Forest Classifier** (`n_estimators=100`, `max_depth=10`, `class_weight='balanced'`).
+  - Evaluated performance using Accuracy, Precision, Recall, F1-Score, and a Seaborn `Confusion Matrix`.
+
+## 🛠️ Tech Stack
+- **Python**
+- **Data Manipulation & Preprocessing:** Pandas, NumPy, Scikit-Learn (`LabelEncoder`, `train_test_split`)
+- **Data Visualization:** Matplotlib, Seaborn
+- **Machine Learning:** Scikit-Learn (`RandomForestClassifier`, `classification_report`, `confusion_matrix`)
+
+## 📊 How to Run
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/your-username/Netflix-EDA-Machine-Learning.git](https://github.com/your-username/Netflix-EDA-Machine-Learning.git)
